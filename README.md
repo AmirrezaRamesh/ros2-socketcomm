@@ -59,3 +59,5 @@ the designed system is exchanging collatz conjecture sequnce numbers:
 - rclcpp serialization:`rclcpp::Serialization<message_type>` is a ros2 class used to serialize and deserialize ros2 messages and  `rclcpp::SerializedMessage` is a buffer to hold the serialized data.
 
 - rclpy serialization: `rcply.serialization` is a module with two function that return serialized and deserialzed form of ros2 messages
+
+- TODO: I really wanted to test this program on docker containers instead of physical machines as a fun practice, and I might as well do it in a couple of days 
