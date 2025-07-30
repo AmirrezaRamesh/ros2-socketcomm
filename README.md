@@ -25,27 +25,24 @@ the designed system is exchanging collatz conjecture sequnce numbers:
 ## Launching the program
 
 0. clone the project on machine A's home directory($HOME) and make scripts executable:
-- `git clone https://github.com/AmirrezaRamesh/ros2-socketcomm` 
-- `chmod +x ros2-socketcomm/build.sh ros2-socket-comm/launch.sh`
+- ```git clone https://github.com/AmirrezaRamesh/ros2-socketcomm```
+- ```chmod +x ros2-socketcomm/build.sh ros2-socket-comm/launch.sh```
 
-1. build the project: `./build.sh 192.168.X.X remote_user`
+1. build the project: ```./build.sh 192.168.X.X remote_user```
 - the script receives `192.168.X.X` and `remote_user` as the IP and user name of machine B
 - the script uses scp to send python & core packge to machine B
 - the script builds packages on both machines
 - the script adds source commands to bashrc 
 
 
-2. launch the project: `./launch.sh 8000 192.168.X.X 192.168.X.Y remote_user`
+2. launch the project: ```./launch.sh 8000 192.168.X.X 192.168.X.Y remote_user```
 - the script receives 4 parameter for starting number, first IP for machine A and second IP for machine B and user of machine B
 - the script launches a launch file on machine A for cpp node and visualizer
 - the script uses ssh to connect to machine B
 - the script creates a tmux session on machine B 
 - the script runs the node inside the tmux session on machine B
 
-> note: ssh and scp is used in scripts above, every single time, you have to enter the remote user's password. to avoid that, use the command below to add your ssh public key to authroized keys of the machine B:
-- `ssh-copy-id remote_user@remote_IP`
-but before that, make sure openssh-server and openssh-client are installed and you have a ssh public key
-to create a ssh public key using `ssh-keygen -t rsa`
+> note: ssh and scp is used in scripts above, every single time, you have to enter the remote user's password. to avoid that, use the command below to add your ssh public key to authroized keys of the machine B using: `ssh-copy-id remote_user@remote_IP`. but before that, make sure openssh-server and openssh-client are installed and you have a ssh public key.to create a ssh public key, use `ssh-keygen -t rsa`
 
 ### running the program
 
