@@ -10,7 +10,7 @@ in this project, two cpp & python nodes exchange a `serialized data` using `tcp 
 
 the designed system is exchanging collatz conjecture sequnce numbers:
 
-1. both nodes gets started on seprate machines across the same local network while cpp node gets a parameter as the starting number
+1. both nodes gets started on seperate machines across the same local network while cpp node gets a parameter as the starting number
 
 2. cpp node waits for python node to get started and send a starting flag to cpp node
 
@@ -20,7 +20,7 @@ the designed system is exchanging collatz conjecture sequnce numbers:
 
 5. python loop: if number's even, divides it by 2 until its odd, then sends the new odd number to cpp node, then waits for a new even number from cpp node to do the process again. after dividing, when it reaches 1, sends the 1 to cpp for one last time and breaks the loop
 
-note: the system is not using ros spin and repetation is handled with some simple loops plus send and receive methods defined in program
+> note: the system is not using ros spin and repetation is handled with some simple loops plus send and receive methods defined in program
 
 ## Launching the program
 
