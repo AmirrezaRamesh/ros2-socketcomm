@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/amir/github/ros2-socketcomm/install/collatz_core/include/**",
+        "/home/amir/auriga_tasks/install/collatz_core/include/**",
+        "/home/amir/ROS/install/tutorial_interfaces/include/**",
+        "/home/amir/ROS/install/polygon_plugins/include/**",
+        "/home/amir/ROS/install/polygon_base/include/**",
+        "/home/amir/ROS/install/more_interfaces/include/**",
+        "/home/amir/ROS/install/action_tutorials_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/amir/github/ros2-socketcomm/src/collatz_core/include/**",
+        "/home/amir/github/ros2-socketcomm/src/collatz_cpp_server/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
