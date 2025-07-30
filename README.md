@@ -45,6 +45,7 @@ the designed system is exchanging collatz conjecture sequnce numbers:
 > note: ssh and scp is used in scripts above, every single time, you have to enter the remote user's password. to avoid that, use the command below to add your ssh public key to authroized keys of the machine B using: `ssh-copy-id remote_user@remote_IP`. but before that, make sure openssh-server and openssh-client are installed and you have a ssh public key.to create a ssh public key, use `ssh-keygen -t rsa`
 
 ### running the program
+[![program](docs/run.png)](docs/run.mp4)
 
 ### extra_details
 
