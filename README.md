@@ -63,4 +63,6 @@ click on the picture and download the mp4 file if you'd like to see a run of the
 
 - rclpy serialization: `rcply.serialization` is a module with two function that return serialized and deserialzed form of ros2 messages
 
+- `collatz_core` is a cpp package for defining the ROS message, but I put a python visualizer node inside it. in order to build the package correctly, a new dependency during the build time was needed for `ament_cmake_python` inside Cmake.txt & package.xml.
+
 - TODO: I really wanted to test this program on docker containers instead of physical machines as a fun practice, and I might as well do it in a couple of days 
