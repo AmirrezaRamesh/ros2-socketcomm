@@ -1,7 +1,7 @@
 ## About the task:
 - this project is defined as a ROS2 system prototype which is able to send data over network without using ROS2 middleware(DDS)'s `pub & sub communication`. 
-- while this project is a didactic task from `auriga robotics team` and no further implementation is planned at the moment, its a good simple setup to get started with when trying to avoid DDS for some reason.
-- a scenario where this would be useful: imagine you're developing a `warehouse robot` and while operating real-time on a ROS2 system, it needs to exchange data with a server's backend(e.g. a database to check the availability of items in warehouse), most `outside of ROS systems` won't support DDS, since its main usage is defined for real-time disturbuted system message handling, so you could use tcp/udp sockets to exchange data over local/public network.
+- while this project is a didactic task from `auriga robotics team` and no further implementation is planned at the moment, it offers a good simple setup to get started with when trying to avoid DDS for any reason.
+- a use case scenario: imagine you're developing a `warehouse robot` operating real-time on a ROS2 system. at some point, it needs to exchange data with a backend server(e.g. querying a database to check item availability), and most non-ROS systems don’t natively support DDS, as DDS is primarily designed for real-time distributed communication within robotic or embedded systems. In such cases, using standard TCP/UDP sockets provides a practical alternative for data exchange over local or public networks.
 
 ## System's flow
 in this project, two cpp & python nodes exchange a `serialized data` using `tcp socket`. the `data` is a `ROS message` and while its a int64 here, the system is desinged for `any complex ROS message` since we serialize and deserialize the data on the endpoints of server & client's sides accourdingly.
@@ -45,7 +45,7 @@ the designed system is exchanging collatz conjecture sequnce numbers:
 > note: ssh and scp is used in scripts above, every single time, you have to enter the remote user's password. to avoid that, use the command below to add your ssh public key to authroized keys of the machine B using: `ssh-copy-id remote_user@remote_IP`. but before that, make sure openssh-server and openssh-client are installed and you have a ssh public key.to create a ssh public key, use `ssh-keygen -t rsa`
 
 ### running the program
-click on the picture and download the mp4 file to see the video
+click on the picture and download the mp4 file if you'd like to see a run of the program
 
 [![program](docs/run.png)](docs/run.mp4)
 

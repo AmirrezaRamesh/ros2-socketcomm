@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # usage:
-#     ./build.sh <target_ip>
+#     ./build.sh <target_ip> <target_user>
 # example:
-#     ./build.sh 192.168.1.10
+#     ./build.sh 192.168.1.10 ros_user
 
 TARGET_IP="$1"
 REMOTE_USER="$2"
