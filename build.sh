@@ -14,7 +14,7 @@ if [ -z "$TARGET_IP" ] || [ -z "$REMOTE_USER" ]; then
     exit 1
 fi
 
-LOCAL_DIR="$HOME/github/ros2-socketcomm"
+LOCAL_DIR="$HOME/ros2-socketcomm"
 REMOTE_DIR="~/ros2-socketcomm"
 
 echo "creating folders on remote..."
@@ -31,7 +31,11 @@ echo "building packages remotely..."
 ssh "$REMOTE_USER@$TARGET_IP" "cd ~/ros2-socketcomm && source /opt/ros/humble/setup.bash && colcon build --symlink-install"
 
 echo "changing bashrc locally..."
+echo "source opt/ros/humble/setup.bash" >> ~/.bashrc
 echo "source $LOCAL_DIR/install/setup.bash" >> ~/.bashrc
+
+echo "sourcing bashrc locally for the launch command"
+source ~/.bashrc 
 
 echo "changing bashrc remotly..."
 ssh "$REMOTE_USER@$TARGET_IP" "echo 'source ~/ros2-socketcomm/install/setup.bash' >> ~/.bashrc"
